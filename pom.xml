@@ -15,6 +15,13 @@
 
 		<app.runtime>4.3.0-20210719</app.runtime>
 		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <!-- 
+    The two following properties are displayed on your project
+    at https://sonarcloud.io
+     -->
+              <sonar.organization>sonarsource</sonar.organization>
+              <sonar.projectKey>SonarSource_sonarcloud-github-action-samples</sonar.projectKey>
 	</properties>
 
 	<build>
