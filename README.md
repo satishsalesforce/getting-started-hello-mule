@@ -1,7 +1,7 @@
 <h1 align="center">
 	<img
 	width="150"
-	src="/images/max-terminal.gif"></br>
+	src="/images/max-terminal.gif">ffffff</br>
 	Getting started with MuleSoft: How to output a “Hello World” from Anypoint Studio.<br>     
 </h1>
 
