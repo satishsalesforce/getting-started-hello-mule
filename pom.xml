@@ -38,6 +38,35 @@
 				<extensions>true</extensions>
 			</plugin>
 		</plugins>
+		
+		 <plugin>
+            <groupId>org.jfrog.buildinfo</groupId>
+            <artifactId>artifactory-maven-plugin</artifactId>
+            <version>3.4.0</version>
+            <inherited>false</inherited>
+            <executions>
+                <execution>
+                    <id>build-info</id>
+                    <goals>
+                        <goal>publish</goal>
+                    </goals>
+                    <configuration>
+                        <deployProperties>
+                            <gradle>awesome</gradle>
+                            <review.team>qa</review.team>
+                        </deployProperties>
+                        <publisher>
+                            <contextUrl>https://mbmbenz.jfrog.io/</contextUrl>
+                            <username>tyric.jaze@doojazz.com</username>
+                            <password>Jfrog@123</password>
+                            <repoKey>libs-release-local</repoKey>
+                            <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+                        </publisher>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
 	</build>
 
 	<dependencies>
@@ -84,34 +113,7 @@
 	
 	
 	<plugins>
-        ...
-        <plugin>
-            <groupId>org.jfrog.buildinfo</groupId>
-            <artifactId>artifactory-maven-plugin</artifactId>
-            <version>3.4.0</version>
-            <inherited>false</inherited>
-            <executions>
-                <execution>
-                    <id>build-info</id>
-                    <goals>
-                        <goal>publish</goal>
-                    </goals>
-                    <configuration>
-                        <deployProperties>
-                            <gradle>awesome</gradle>
-                            <review.team>qa</review.team>
-                        </deployProperties>
-                        <publisher>
-                            <contextUrl>https://mbmbenz.jfrog.io/</contextUrl>
-                            <username>tyric.jaze@doojazz.com</username>
-                            <password>Jfrog@123</password>
-                            <repoKey>libs-release-local</repoKey>
-                            <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-                        </publisher>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
+        
+       
 
 </project>
