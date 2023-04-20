@@ -4,7 +4,7 @@
 		<repository>
 		  <id>internal.repo</id>
 		  <name>Internal repo</name>
-		  <url>https://mbmbenz.jfrog.io/ui/native/default-libs-release-local/</url>
+		  <url>https://mbmbenz.jfrog.io/ui/native/default-libs-release-local</url>
 		</repository>
         </distributionManagement>
 	<modelVersion>4.0.0</modelVersion>
