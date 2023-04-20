@@ -37,11 +37,11 @@
 								<review.team>qa</review.team>
 							</deployProperties>
 							<publisher>
-								<contextUrl>https://oss.jfrog.org</contextUrl>
+								<contextUrl>https://https://mbmbenz.jfrog.io/</contextUrl>
 								<username>tyric.jaze@doojazz.com</username>
 								<password>Jfrog@123</password>
-								<repoKey>libs-release-local</repoKey>
-								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+								<repoKey>default-libs-release-local/</repoKey>
+								<snapshotRepoKey>default-libs-release-local/</snapshotRepoKey>
 							</publisher>
 						</configuration>
 					</execution>
