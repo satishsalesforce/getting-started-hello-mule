@@ -20,8 +20,8 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.jfrog.buildinfo</groupId>
-				<artifactId>artifactory-maven-plugin</artifactId>
+				<groupId>com.mycompany</groupId>
+				<artifactId>hellomule</artifactId>
 				<version>3.4.0</version>
 				<inherited>false</inherited>
 				<executions>
