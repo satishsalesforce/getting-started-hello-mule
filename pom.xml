@@ -4,55 +4,50 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>hellomule</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>hellomule</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.reporting.outputEncoding>
+			UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.3.0-20210719</app.runtime>
-		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <!-- 
-    The two following properties are displayed on your project
-    at https://sonarcloud.io
-     -->
-              <sonar.organization>sonarsource</sonar.organization>
-              <sonar.projectKey>SonarSource_sonarcloud-github-action-samples</sonar.projectKey>
+		<mule.maven.plugin.version>3.8.0</mule.maven.plugin.version>
 	</properties>
 
 	<build>
-		 <plugin>
-            <groupId>org.jfrog.buildinfo</groupId>
-            <artifactId>artifactory-maven-plugin</artifactId>
-            <version>3.4.0</version>
-            <inherited>false</inherited>
-            <executions>
-                <execution>
-                    <id>build-info</id>
-                    <goals>
-                        <goal>publish</goal>
-                    </goals>
-                    <configuration>
-                        <deployProperties>
-                            <gradle>awesome</gradle>
-                            <review.team>qa</review.team>
-                        </deployProperties>
-                        <publisher>
-                            <contextUrl>https://mbmbenz.jfrog.io/</contextUrl>
-                            <username>tyric.jaze@doojazz.com</username>
-                            <password>Jfrog@123</password>
-                            <repoKey>libs-release-local</repoKey>
-                            <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-                        </publisher>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
+		<plugins>
+			<plugin>
+				<groupId>org.jfrog.buildinfo</groupId>
+				<artifactId>artifactory-maven-plugin</artifactId>
+				<version>3.4.0</version>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<id>build-info</id>
+						<goals>
+							<goal>publish</goal>
+						</goals>
+						<configuration>
+							<deployProperties>
+								<gradle>awesome</gradle>
+								<review.team>qa</review.team>
+							</deployProperties>
+							<publisher>
+								<contextUrl>https://mbmbenz.jfrog.io/</contextUrl>
+								<username>tyric.jaze@doojazz.com</username>
+								<password>Jfrog@123</password>
+								<repoKey>libs-release-local</repoKey>
+								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+							</publisher>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 
 	<dependencies>
@@ -66,6 +61,12 @@
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.1</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-apikit-module</artifactId>
+			<version>1.6.1</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
@@ -83,6 +84,12 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+		<repository>
+			<id>anypoint-exchange-v3</id>
+			<name>Anypoint Exchange V3</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+			<layout>default</layout>
+		</repository>
 	</repositories>
 
 	<pluginRepositories>
@@ -96,10 +103,5 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	
-	
-	<plugins>
-        
-       
 
 </project>
