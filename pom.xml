@@ -38,8 +38,8 @@
 							</deployProperties>
 							<publisher>
 								<contextUrl>https://oss.jfrog.org</contextUrl>
-								<username>deployer</username>
-								<password>{DESede}...</password>
+								<username>tyric.jaze@doojazz.com</username>
+								<password>Jfrog@123</password>
 								<repoKey>libs-release-local</repoKey>
 								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
 							</publisher>
