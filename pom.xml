@@ -4,15 +4,15 @@
 		<repository>
 			<id>central</id>
 			<name>a0vwqlt5rkgj9-artifactory-primary-0-releases</name>
-			<url>https://mbmbenz.jfrog.io/artifactory/default-libs-release</url>
+			<url>https://mbmbenz.jfrog.io/artifactory</url>
 		</repository>
 	</distributionManagement>
 	<modelVersion>4.0.0</modelVersion>
 	
 	
-	<groupId>com</groupId>
-	<artifactId>hellomule</artifactId>
-	<version>1.0.0</version>
+	<groupId>default-libs-release</groupId>
+	<artifactId></artifactId>
+	<version></version>
 	<packaging>mule-application</packaging>
 
 	<name>hellomule</name>
