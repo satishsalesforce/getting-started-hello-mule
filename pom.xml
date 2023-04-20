@@ -20,11 +20,17 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>com.mycompany</groupId>
-				<artifactId>hellomule</artifactId>
-				<version>1.0.0-SNAPSHOT</version>
-				<inherited>false</inherited>
-				<executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<executions>
 					<execution>
 						<id>build-info</id>
 						<goals>
@@ -45,7 +51,6 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
