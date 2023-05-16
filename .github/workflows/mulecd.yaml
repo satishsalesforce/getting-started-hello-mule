@@ -41,17 +41,21 @@ jobs:
         ls target/*.jar | head -1
         artifactName1=$(ls target/*.jar | head -1)
         anypoint-cli-v4 exchange:asset:upload \
-        --name "hellomule3" \
+        --name "hellomule4" \
         --files='{"mule-application.jar": "'"$artifactName1"'"}' \
         --type app \
-        hello-mule3/1.0.0
+        hello-mule4/1.0.0
     - name: Stamp artifact file name with commit hash
       run: |
         artifactName1=$(ls target/*.jar | head -1)
         commitHash=$(git rev-parse --short "$GITHUB_SHA")
         artifactName2=$(ls target/*.jar | head -1 | sed "s/.jar/.$commitHash.jar/g")
         mv $artifactName1 $artifactName2
-    - name: Print File Name
+    - name: Deploy to CloudHUB
+      env: 
+          ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_USERNAME }} 
+          ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
+          ANYPOINT_ORG_ID: ${{ secrets.ANYPOINT_ORGID }}
       run: |
         anypoint-cli-v4 runtime-mgr:application:deploy hellomule2 cloudhub-us-east-2 4.4.0 hello-mule 
     - uses: actions/upload-artifact@master
