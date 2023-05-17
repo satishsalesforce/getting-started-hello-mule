@@ -57,7 +57,7 @@ jobs:
           ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
           ANYPOINT_ORG_ID: ${{ secrets.ANYPOINT_ORGID }}
       run: |
-        anypoint-cli-v4 runtime-mgr:application:deploy hellomule2 cloudhub-us-east-2 4.4.0 hello-mule 
+        anypoint-cli-v4 runtime-mgr:application:deploy ${{ vars.APP_ID }} ${{ vars.DEPLOYMENT_TARGET }} ${{ vars.RUNTIME_VERSION }} ${{ vars.ARTIFACT_ID }} 
     - uses: actions/upload-artifact@master
       with:
           name: artifacts
