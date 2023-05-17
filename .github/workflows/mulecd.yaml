@@ -41,7 +41,7 @@ jobs:
         ls target/*.jar | head -1
         artifactName1=$(ls target/*.jar | head -1)
         anypoint-cli-v4 exchange:asset:upload \
-        --name "hellomule4" \
+        --name "hellomule1" \
         --files='{"mule-application.jar": "'"$artifactName1"'"}' \
         --type app \
         hello-mule4/1.0.0
