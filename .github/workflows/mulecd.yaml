@@ -31,7 +31,7 @@ jobs:
     - name: Build and Test
       run: mvn -B clean deploy --file pom.xml -DskipTests=true | sudo apt-get update | npm install -g anypoint-cli-v4 
     - name: Install Anypoint 
-      run: anypoint-cli-v4 plugins:install anypoint-cli-exchange-plugin
+      run: anypoint-cli-v4 plugins:install anypoint-cli-exchange-plugin | echo "repository variable :$vars.HELLO_WORLD"
     - name: Upload Asset to Exchange
       env: 
           ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_USERNAME }} 
