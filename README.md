@@ -2,7 +2,7 @@
 	<img
 	width="150"
 	src="/images/max-terminal.gif"></br>
-	Getting started with MuleSoft: How to output a “Hello World” from Anypoint Studio.<br>     
+	Getting started with MuleSoft: How to output a “Hello World” from Anypoint Studios.<br>     
 </h1>
 
 <h4 align="center">
